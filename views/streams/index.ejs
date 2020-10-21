@@ -1,0 +1,12 @@
+<h2>All Stream</h2>
+<form action="/streams" method="GET">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= searchOptions.name %>">
+    <button type="submit">Search</button>
+</form>
+<br>
+<% streams.forEach( stream => { %>
+  <div>
+      <%= stream.name %>
+  </div>
+<% }) %>
