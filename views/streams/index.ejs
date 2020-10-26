@@ -9,4 +9,8 @@
   <div>
       <%= stream.name %>
   </div>
-<% }) %>
+  <a href="/streams/<%= stream.id %>">View</a>
+  <a href="/streams/<%= stream.id %>/edit">Edit</a>
+  <%- include('../partials/deleteForm', 
+  { url: `/streams/${stream.id}` }) %>
+ <% }) %>

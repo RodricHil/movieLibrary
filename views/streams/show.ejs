@@ -1,0 +1,10 @@
+<h2><%= stream.name %></h2>
+<a href="/streams/<%= stream.id %>/edit">Edit</a>
+<%- include('../partials/deleteForm',
+            { url: `/streams/${stream.id}`}) %>
+<% if (moviesByStream.length > 0) { %>
+    <h2>Movies By Streaming Site</h2>
+    <% moviesByStream.forEach( movie => { %>
+    <img height="150" width="100" src="<%= movie.coverImagePath %>" alt="">
+    <% }) %>
+<% } %>
